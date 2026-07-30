@@ -95,3 +95,21 @@ b = Decimal('.2')
 # there are more than four object types and once they exist you can see 
 # all the associated methods
 print(a+b)
+
+my_name = 'Abigail'
+my_name.count()
+
+passed = 8 > 5
+
+test = [0,1,2,3,4,5,6]
+x = test.pop()
+print(x)
+print(test)
+
+
+test1 = [0,1,2,3,4,5,6]
+x1 = test1.append(7)
+print(x1)
+print(test1)
+
+test.pop()
