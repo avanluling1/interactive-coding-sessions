@@ -33,4 +33,89 @@ else:
 # and they stop at the first True statement that they encounter.
 # the final statement can be (but does not have to be) an ELSE statement:
 # else, note that there is no condition
-# 
+# when will else run? 
+# only when all the statements have evaluated to false
+
+# VERY COMMON GOTCHA WITH CONDITIONAL STATEMENTS:
+
+def status_checker(age):
+    if age >= 18:
+        print("You are an adult")
+    elif age >= 13:
+        print("You are a teenager")
+    elif age >= 4:
+        print("You are a kid")
+    else:
+        print("You are a baby")
+
+status_checker(1)
+status_checker(5)
+status_checker(17)
+status_checker(39)
+
+# order statements from most restrictive to least restrictive
+
+def can_legally_drink(country, age):
+    if (country == "USA"):
+        if (age >= 21):
+            return True
+        else: 
+            return False
+    elif (country == "Canada"):
+        if (age >= 19):
+            return True
+        else:
+            return False
+    elif (country == "Germany"):
+        if (age >= 16):
+            return True
+        else:
+            return False
+    else: 
+        return "Don't know"
+
+# trick 1: You can write a simple if statement in one line
+# that's called the "TERNARY OPERATOR":
+
+age = 20
+status = "adult" if age >= 18 else "minor"
+# value_if_true if <logical statement> else value_if_false
+
+# trick 2: you can sometimes save yourself a lot of effort by using a dictionary 
+# rather than an if statement
+
+# let's say you want ot map countries to their currency: 
+
+def get_country_currency(country):
+    if country == "USA":
+        return "US Dollars"
+    elif country == "Canada":
+        return "Canadian Dollars"
+    elif country == "France":
+        return "Euros"
+    elif country == "Japan":
+        return "Yen"
+    else:
+        return "Country not found"
+
+# this is good but not great
+# we are always checking the value of one variable (country)
+# and depending on the value we are returning another
+
+# it works a lot like a dictionary
+country_currency = {
+    "USA" : "US Dollars",
+    "Canada" : "Canadian Dollars",
+    "France" : "Euros",
+    "Japan" : "Yen"
+}
+
+# how do we get the currency from here
+country_currency["France"]
+
+get_country_currency("Iran")
+country_currency['Iran'] # this returns a key error
+
+# however
+country_currency.get("Iran","Country not found")
+
