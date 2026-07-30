@@ -1,0 +1,24 @@
+# we are going to talk about control flow
+# control flow is instructions that determine when, whether, and how often
+# a section of the code is going to run. 
+
+my_name = 'Abigail'
+my_gender = 'Female'
+
+if my_gender == 'Female': 
+    print("Hello Ms." + my_name)
+elif my_gender == 'Male':
+    print("Hello Mr." + my_name)
+elif my_gender == 'Non-Binary':
+    print("Hello" + my_name)
+else:
+    print("Hello" + my_name + ", how should I address you?")
+
+# anatomy of an if statement:
+# an if statement begins with a keyword if
+# after the if statement, we have a logical statement/logical test,
+# or logical expression (something that evals to true or false)
+# after that, we have a colon:
+# on the next line follows an indented code block: 
+# the indented code block is what the machine will run IF the logical statement
+# evaluates to true
